@@ -29,7 +29,7 @@ struct Dates: Decodable {
 // MARK: - Result
 struct Movie: Decodable {
   let adult: Bool
-  let backdropPath: String
+  let backdropPath: String?
   let genreIds: [Int]
   let id: Int
 //  let originalLanguage: OriginalLanguage

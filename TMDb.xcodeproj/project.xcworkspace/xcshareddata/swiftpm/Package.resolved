@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "jaal",
+      "identity" : "jaalframework",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/iampriyadarshan/Jaal",
+      "location" : "https://github.com/iampriyadarshan/JaalFramework",
       "state" : {
         "branch" : "main",
-        "revision" : "d7c048d503c2b9e0ba4cda49bbd1a67212dc60d0"
+        "revision" : "cc4a094e239c00e62290b73dfea471bfcffcf00a"
       }
     }
   ],

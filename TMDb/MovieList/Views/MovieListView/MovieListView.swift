@@ -10,7 +10,6 @@ import SwiftUI
 struct MovieListView: View {
   
   @ObservedObject var viewModel: MovieListViewModel
-  @State private var viewLoaded = false
   
   init(viewModel: MovieListViewModel) {
     self.viewModel = viewModel
@@ -33,7 +32,11 @@ struct MovieListView: View {
         }
         if viewModel.isMoreDataAvailable {
           lastRowView
+            .listRowBackground(EmptyView().foregroundStyle(.clear))
         }
+      }
+      .refreshable {
+        viewModel.getFreshList()
       }
       .overlay {
         if viewModel.movieList.isEmpty {
@@ -47,13 +50,6 @@ struct MovieListView: View {
       .navigationTitle(viewModel.title)
       .navigationBarTitleDisplayMode(.large)
       .background(.listBackground)
-      .onAppear {
-        if !viewLoaded  {
-          viewLoaded = true
-          viewModel.getMovieList()
-        }
-      }
-      
     }
   }
   
@@ -62,10 +58,8 @@ struct MovieListView: View {
       switch viewModel.movieListState {
       case .loading:
         ProgressView()
-          .foregroundStyle(.listBackground)
       case .idle:
         EmptyView()
-          .foregroundStyle(.listBackground)
       }
     }
     .frame(height: 50)

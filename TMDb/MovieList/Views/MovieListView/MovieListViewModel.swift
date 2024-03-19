@@ -41,16 +41,24 @@ class MovieListViewModel: ObservableObject {
     self.listType = listType
   }
   
+  func getFreshList() {
+    currentPage = 1
+    movieList.removeAll()
+    getMovieList()
+  }
+  
   func getMovieList() {
     movieListState = .loading
+    print("Current Page: \(currentPage + 1)")
     repository.getMovieList(language: language, page: "\(currentPage + 1)", listType: listType)
       .tryMap { [weak self] in
         self?.isMoreDataAvailable = self?.movieList.count ?? 0 < $0.totalResults
         self?.currentPage = $0.page
         return $0.results?.compactMap { $0.toMovieCardViewModel }
       }
-      .sink( receiveCompletion: { error in
+      .sink( receiveCompletion: { [weak self] error in
         print(error)
+        self?.movieListState = .idle
       },receiveValue: { [weak self] response in
         self?.movieListState = .idle
         self?.movieList.append(contentsOf: response ?? [])

@@ -28,8 +28,8 @@
 		FB05DCB02BA223390071EA8D /* MovieDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB05DCAF2BA223390071EA8D /* MovieDetailsRepository.swift */; };
 		FB05DCB22BA293B60071EA8D /* MovieDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB05DCB12BA293B60071EA8D /* MovieDetailResponse.swift */; };
 		FB05DCB42BA294300071EA8D /* MovieDetailInjectables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB05DCB32BA294300071EA8D /* MovieDetailInjectables.swift */; };
-		FB05DCB72BA2FC240071EA8D /* Jaal in Frameworks */ = {isa = PBXBuildFile; productRef = FB05DCB62BA2FC240071EA8D /* Jaal */; };
 		FB2EEBBF2BA3306400680D4E /* TMDbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2EEBBE2BA3306400680D4E /* TMDbTests.swift */; };
+		FBCB07182BA96E85003B3985 /* Jaal in Frameworks */ = {isa = PBXBuildFile; productRef = FBCB07172BA96E85003B3985 /* Jaal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB05DCB72BA2FC240071EA8D /* Jaal in Frameworks */,
+				FBCB07182BA96E85003B3985 /* Jaal in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +271,7 @@
 			);
 			name = TMDb;
 			packageProductDependencies = (
-				FB05DCB62BA2FC240071EA8D /* Jaal */,
+				FBCB07172BA96E85003B3985 /* Jaal */,
 			);
 			productName = TMDb;
 			productReference = FB05DC772B9C84310071EA8D /* TMDb.app */;
@@ -324,7 +324,7 @@
 			);
 			mainGroup = FB05DC6E2B9C84310071EA8D;
 			packageReferences = (
-				FB05DCB52BA2FC240071EA8D /* XCRemoteSwiftPackageReference "Jaal" */,
+				FBCB07162BA96E85003B3985 /* XCRemoteSwiftPackageReference "JaalFramework" */,
 			);
 			productRefGroup = FB05DC782B9C84310071EA8D /* Products */;
 			projectDirPath = "";
@@ -647,9 +647,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FB05DCB52BA2FC240071EA8D /* XCRemoteSwiftPackageReference "Jaal" */ = {
+		FBCB07162BA96E85003B3985 /* XCRemoteSwiftPackageReference "JaalFramework" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/iampriyadarshan/Jaal";
+			repositoryURL = "https://github.com/iampriyadarshan/JaalFramework";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -658,9 +658,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FB05DCB62BA2FC240071EA8D /* Jaal */ = {
+		FBCB07172BA96E85003B3985 /* Jaal */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FB05DCB52BA2FC240071EA8D /* XCRemoteSwiftPackageReference "Jaal" */;
+			package = FBCB07162BA96E85003B3985 /* XCRemoteSwiftPackageReference "JaalFramework" */;
 			productName = Jaal;
 		};
 /* End XCSwiftPackageProductDependency section */
